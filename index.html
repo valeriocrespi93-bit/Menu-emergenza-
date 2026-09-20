@@ -1,4 +1,4 @@
-<div style="background:#b32d2e;color:#fff;text-align:center;padding:12px;font-family:sans-serif;font-size:14px;">Questa e' una copia di emergenza, generata il 19/09/2026 00:15. Potrebbe non riflettere le modifiche piu' recenti al menu.</div><!DOCTYPE html>
+<div style="background:#b32d2e;color:#fff;text-align:center;padding:12px;font-family:sans-serif;font-size:14px;">Questa e' una copia di emergenza, generata il 20/09/2026 19:18. Potrebbe non riflettere le modifiche piu' recenti al menu.</div><!DOCTYPE html>
 <html lang="it-IT">
 <head>
 	<meta charset="UTF-8" />
@@ -253,6 +253,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         body:has(.bt-popup-overlay.active) .bt-header-logo,
         body:has(.bt-tendina-overlay.active) .bt-header-logo {
             opacity: 0; pointer-events: none;
+        }
+
+        /* Dentro una categoria il logo non serve piu' — chi c'e' arrivato
+           sa gia' dove si trova — e lo spazio che occupava puo' tornare
+           utile al contenuto. Resta visibile solo nella home (scelta
+           categorie). Come sopra, riducendo la variabile condivisa tutto
+           il resto si aggiusta di conseguenza, senza toccare altro. */
+        .bt-app.dentro-categoria .bt-header-logo {
+            opacity: 0; pointer-events: none;
+        }
+        .bt-app.dentro-categoria {
+            --bt-logo-h: env(safe-area-inset-top, 0px);
         }
 
         .bt-bottombar {
@@ -2459,7 +2471,6 @@ cinghiale,&nbsp;salame di fegato, speck, 3 tipi di formaggio,&nbsp;2 mezze brusc
                                     <span class="bt-preview-riga">ZWICKEL</span>
                                     <span class="bt-preview-riga">HEFE WEIZEN</span>
                                     <span class="bt-preview-riga">MADUE</span>
-                                    <span class="bt-preview-riga">GOSE</span>
                                     <span class="bt-preview-riga">BOCK</span>
                                     <span class="bt-preview-riga">LUCKY JACK</span>
                                     <span class="bt-preview-riga">MOBSTER</span>
@@ -2540,25 +2551,6 @@ cinghiale,&nbsp;salame di fegato, speck, 3 tipi di formaggio,&nbsp;2 mezze brusc
                     <div class="bt-riga-testo">
                         <span class="bt-riga-titolo">MADUE</span>
                         <span class="bt-riga-meta">BIRRA. DELL’EREMO · SOUR ALE</span>                                            </div>
-                    <div class="bt-riga-destra">
-                        <span class="bt-riga-prezzo">6€</span>                    </div>
-                </div>
-                                <span class="bt-riga-info-testo">
-                    <span class="lang-it">Maggiori info</span><span class="lang-en" style="display:none;">More info</span>
-                    <span aria-hidden="true">&#8250;</span>
-                </span>
-            </div>
-                    <div class="bt-riga"
-                 data-prodotto-id="1616"
-                 data-prodotto-prezzo="6€"
-                 data-popup-title="GOSE"
-                 data-popup-fields-it="[{&quot;label&quot;:&quot;Tipologia&quot;,&quot;value&quot;:&quot;GOSE&quot;},{&quot;label&quot;:&quot;birrificio&quot;,&quot;value&quot;:&quot;Bayrisher Bahnhof&quot;},{&quot;label&quot;:&quot;Provenienza&quot;,&quot;value&quot;:&quot;Lipsia, Germania&quot;},{&quot;label&quot;:&quot;Dimensione&quot;,&quot;value&quot;:&quot;Boccale 0,5&quot;},{&quot;label&quot;:&quot;Descrizione&quot;,&quot;value&quot;:&quot;Uno degli antichi stili birrai tedeschi, che viene prodotto ormai da due soli birrifici a Lipsia ma che conta ormai numerose nuove interpretazioni. Una birra dal colore chiaro opalescente, prodotta con l’utilizzo di frumento, coriandolo e sale. Una birra unica nel suo genere, nella quale la sua sapidità e una leggera e mai invadente acidità la fanno da padrona.&quot;},{&quot;label&quot;:&quot;Alc&quot;,&quot;value&quot;:&quot;4,5&quot;},{&quot;label&quot;:&quot;prezzo&quot;,&quot;value&quot;:&quot;6€&quot;}]"
-                 data-popup-fields-en="[{&quot;label&quot;:&quot;Tipologia&quot;,&quot;value&quot;:&quot;GOSE&quot;},{&quot;label&quot;:&quot;birrificio&quot;,&quot;value&quot;:&quot;Bayrisher Bahnhof&quot;},{&quot;label&quot;:&quot;Provenienza&quot;,&quot;value&quot;:&quot;Lipsia, Germania&quot;},{&quot;label&quot;:&quot;Dimensione&quot;,&quot;value&quot;:&quot;Boccale 0,5&quot;},{&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;Uno degli antichi stili birrai tedeschi, che viene prodotto ormai da due soli birrifici a Lipsia ma che conta ormai numerose nuove interpretazioni. Una birra dal colore chiaro opalescente, prodotta con l’utilizzo di frumento, coriandolo e sale. Una birra unica nel suo genere, nella quale la sua sapidità e una leggera e mai invadente acidità la fanno da padrona.&quot;},{&quot;label&quot;:&quot;Alc&quot;,&quot;value&quot;:&quot;4,5&quot;},{&quot;label&quot;:&quot;prezzo&quot;,&quot;value&quot;:&quot;6€&quot;}]"
-                 onclick="event.stopPropagation(); btApriPopupRiga(this);">
-                <div class="bt-riga-principale">
-                    <div class="bt-riga-testo">
-                        <span class="bt-riga-titolo">GOSE</span>
-                        <span class="bt-riga-meta">Bayrisher Bahnhof · GOSE</span>                                            </div>
                     <div class="bt-riga-destra">
                         <span class="bt-riga-prezzo">6€</span>                    </div>
                 </div>
@@ -17936,7 +17928,7 @@ cinghiale,&nbsp;salame di fegato, speck, 3 tipi di formaggio,&nbsp;2 mezze brusc
 </script>
 <script>
 ( function() {
-	const cfg = {"ajaxUrl":"https:\/\/www.birrifugiotrastevere.com\/wp-admin\/admin-ajax.php","action":"ahcs_cache_warmer","nonce":"2d90792284"};
+	const cfg = {"ajaxUrl":"https:\/\/www.birrifugiotrastevere.com\/wp-admin\/admin-ajax.php","action":"ahcs_cache_warmer","nonce":"b999f569da"};
 	const data = new FormData();
 	data.append( "action", cfg.action );
 	data.append( "ahsc_cw_nonce", cfg.nonce );
@@ -18510,6 +18502,19 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
                 window.history.pushState({ bt: target }, '', '');
             }
 
+            // "main" e' la schermata delle categorie, non una categoria
+            // vera — solo un ingresso in una categoria vera e propria
+            // conta come "questa categoria e' stata aperta"
+            if (target !== 'main') {
+                document.dispatchEvent(new CustomEvent('bt:categoria-mostrata', { detail: { id: target } }));
+            }
+
+            // il logo resta solo nella home (scelta categorie): appena si
+            // entra in una categoria vera, questa classe lo fa sparire e
+            // libera lo spazio che occupava (vedi lo stile qui sopra)
+            const app = document.getElementById('btApp');
+            if (app) app.classList.toggle('dentro-categoria', target !== 'main');
+
             const car = carousels[target];
             if (car) {
                 /* Se viene indicata una card precisa (es. arrivando da un
@@ -18858,6 +18863,634 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
         });
         window.addEventListener('orientationchange', function() {
             setTimeout(btRicalcolaTutti, 300);
+        });
+    })();
+    </script>
+    
+    <style>
+        /* pulsante "+" accanto a ogni prodotto */
+        .btl-add {
+            width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+            border: 1px solid #6b5b45; background: rgba(217,171,99,0.10); color: #d9ab63;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 17px; line-height: 1; cursor: pointer; padding: 0;
+            font-family: inherit; transition: background 0.15s, transform 0.15s;
+        }
+        .btl-add:active { transform: scale(0.88); background: rgba(217,171,99,0.3); }
+        .btl-add.btl-add-fatto { background: #d9ab63; color: #241e18; border-color: #d9ab63; }
+        .btl-add.btl-add-in-lista {
+            background: #d9ab63; color: #241e18; border-color: #d9ab63;
+            opacity: 0.6; cursor: default;
+        }
+        .btl-add.btl-add-in-lista:active { transform: none; }
+
+        /* pulsante nella barra in fondo, col numero di articoli */
+        .btl-btn {
+            position: relative; height: 38px; min-width: 38px; padding: 0 10px;
+            border-radius: 19px; border: 1px solid #544838;
+            background: rgba(36,30,24,0.85); color: #f6f0e3;
+            display: flex; align-items: center; justify-content: center; gap: 6px;
+            cursor: pointer; font-family: inherit;
+        }
+        .btl-btn svg { width: 17px; height: 17px; }
+        .btl-btn.btl-pieno { border-color: #d9ab63; color: #d9ab63; }
+        .btl-conta {
+            min-width: 19px; height: 19px; padding: 0 5px; border-radius: 10px;
+            background: #d9ab63; color: #241e18;
+            font-size: 11px; font-weight: 700; line-height: 19px; text-align: center;
+            display: none;
+        }
+        .btl-btn.btl-pieno .btl-conta { display: block; }
+
+        /* righe della lista */
+        .btl-riga {
+            display: flex; align-items: center; justify-content: space-between; gap: 12px;
+            padding: 12px 0; border-bottom: 1px solid #453b30;
+        }
+        .btl-riga:last-child { border-bottom: none; }
+        .btl-riga-testo { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+        .btl-riga-nome { font-size: 15px; color: #f6f0e3; }
+        .btl-riga-prezzo { font-size: 12px; color: #b58c50; }
+        .btl-elimina {
+            width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+            border: 1px solid #6b5b45; background: rgba(255,255,255,0.03); color: #b3a894;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; padding: 0; font-family: inherit;
+        }
+        .btl-elimina svg { width: 17px; height: 17px; }
+        .btl-elimina:active { background: rgba(217,90,90,0.18); color: #e08787; border-color: #b56060; }
+
+        .btl-vuota { text-align: center; color: #b3a894; font-size: 14px; padding: 30px 10px; line-height: 1.6; }
+        .btl-nota {
+            margin-top: 14px; padding-top: 12px; border-top: 1px solid #453b30;
+            font-size: 15px; color: #d8cdb9; line-height: 1.5; text-align: center;
+            flex-shrink: 0;
+        }
+        .btl-svuota {
+            margin-top: 16px; margin-bottom: 14px; width: 100%; padding: 12px; border-radius: 8px;
+            border: 1px solid #544838; background: transparent; color: #b3a894;
+            font-size: 13px; cursor: pointer; font-family: inherit; flex-shrink: 0;
+        }
+        .btl-svuota:active { background: rgba(255,255,255,0.04); }
+
+        /* pulsante dentro il popup del prodotto */
+        .btl-popup-add {
+            width: 100%; margin-top: 4px; padding: 13px; border-radius: 8px;
+            border: 1px solid #d9ab63; background: rgba(217,171,99,0.12); color: #d9ab63;
+            font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase;
+            cursor: pointer; font-family: inherit; flex-shrink: 0;
+        }
+        .btl-popup-add:active { background: rgba(217,171,99,0.28); }
+        .btl-popup-add.btl-add-in-lista { opacity: 0.6; cursor: default; }
+        .btl-popup-add.btl-add-in-lista:active { background: rgba(217,171,99,0.12); }
+
+        /* Il foglio di questo popup smette di scorrere lui stesso — resta
+           fermo, esattamente come fa gia' il popup del prodotto — e solo
+           il contenuto sotto scorre. Prima, con il foglio stesso come
+           unica area scorrevole, il gesto "trascina per chiudere" (che
+           agisce proprio sul foglio) andava in conflitto con lo
+           scorrimento della lista quando c'erano molti articoli: bastava
+           un piccolo movimento verso il basso durante lo scorrimento per
+           sembrare un tentativo di chiudere il popup. */
+        /* Questo popup viene stampato nel footer della pagina, fuori dal
+           contenitore principale del menu (.bt-app) — l'unico punto dove
+           la variabile --bt-logo-h e' definita. Senza ridefinirla anche
+           qui, il calcolo dell'altezza del foglio (che la usa) falliva
+           in silenzio: il foglio cresceva libero invece di restare
+           fissato allo schermo, e tutto quello che doveva restare fermo
+           (titolo, X, svuota) scorreva via insieme alla lista. Verificato
+           con un test dedicato prima di questa correzione. */
+        #btlPopup { --bt-logo-h: 178px; }
+        #btlPopup .bt-popup-sheet { overflow: hidden; display: flex; flex-direction: column; }
+        #btlContenuto {
+            overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+            flex: 1; min-height: 0;
+        }
+    </style>
+
+    <div class="bt-popup-overlay" id="btlPopup" onclick="btlChiudi()">
+        <div class="bt-popup-sheet" onclick="event.stopPropagation()">
+            <div class="bt-popup-maniglia"></div>
+            <div class="bt-popup-close" onclick="btlChiudi()">&times;</div>
+            <h3 class="bt-popup-eyebrow">
+                <span class="lang-it">La mia lista</span><span class="lang-en" style="display:none;">My list</span>
+            </h3>
+            <button type="button" class="btl-svuota" id="btlSvuota" style="display:none;">
+                <span class="lang-it">Svuota la lista</span><span class="lang-en" style="display:none;">Empty the list</span>
+            </button>
+            <div id="btlContenuto" class="bt-popup-body"></div>
+            <div class="btl-nota">
+                <span class="lang-it">Questa lista &egrave; solo un promemoria, mostrala o elencala al cameriere per ordinare.</span>
+                <span class="lang-en" style="display:none;">This list is just a reminder &mdash; show it or read it out to the waiter to place your order.</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    (function() {
+        const CHIAVE = 'bt_lista_ordine';
+        const DURATA_ORE = 6;
+
+        let lista = [];
+
+        /* --- conservazione sul telefono del cliente ------------------ */
+        function carica() {
+            try {
+                const grezzo = localStorage.getItem(CHIAVE);
+                if (!grezzo) return [];
+                const dati = JSON.parse(grezzo);
+                // dopo qualche ora la lista si considera vecchia e si azzera:
+                // evita di ritrovare l'ordine del giorno prima
+                if (!dati.quando || (Date.now() - dati.quando) > DURATA_ORE * 3600 * 1000) {
+                    localStorage.removeItem(CHIAVE);
+                    return [];
+                }
+                return Array.isArray(dati.voci) ? dati.voci : [];
+            } catch (e) { return []; }
+        }
+
+        function salva() {
+            try {
+                localStorage.setItem(CHIAVE, JSON.stringify({ quando: Date.now(), voci: lista }));
+            } catch (e) {}
+        }
+
+        /* --- operazioni sulla lista ---------------------------------- */
+        function trova(id) { return lista.find(function(v) { return v.id === id; }); }
+
+        function aggiungi(id, nome, prezzo) {
+            if (!id) return;
+            const v = trova(id);
+            if (v) v.qta++;
+            else lista.push({ id: id, nome: nome, prezzo: prezzo || '', qta: 1 });
+            salva(); aggiornaTutto();
+        }
+
+        function rimuoviProdotto(id) {
+            lista = lista.filter(function(x) { return x.id !== id; });
+            salva(); aggiornaTutto();
+        }
+
+        /* Il pulsante "+" di un prodotto gia' in lista diventa non
+           cliccabile e cambia colore, finche' non viene tolto dalla
+           lista (dal cestino nel popup) — a quel punto torna normale. */
+        function sincronizzaPulsantiAggiungi() {
+            document.querySelectorAll('.btl-add').forEach(function(b) {
+                const riga = b.closest('.bt-riga');
+                const id = riga ? riga.getAttribute('data-prodotto-id') : null;
+                const presente = !!(id && trova(id));
+                b.classList.toggle('btl-add-in-lista', presente);
+                b.disabled = presente;
+            });
+        }
+
+        function totaleArticoli() {
+            return lista.reduce(function(s, v) { return s + v.qta; }, 0);
+        }
+
+        /* --- pulsanti "+" accanto ai prodotti ------------------------ */
+        function marcaProdotti() {
+            document.querySelectorAll('.bt-riga').forEach(function(riga) {
+                const destra = riga.querySelector('.bt-riga-destra');
+                if (!destra || destra.querySelector('.btl-add')) return;
+
+                const id = riga.getAttribute('data-prodotto-id');
+                if (!id) return;
+
+                const b = document.createElement('button');
+                b.className = 'btl-add';
+                b.type = 'button';
+                b.setAttribute('aria-label', 'Aggiungi alla lista');
+                b.textContent = '+';
+                b.addEventListener('click', function(e) {
+                    e.stopPropagation();   // non deve aprire la scheda del prodotto
+                    const nome = riga.getAttribute('data-popup-title') || '';
+                    const prezzo = riga.getAttribute('data-prodotto-prezzo') || '';
+                    aggiungi(id, nome, prezzo);
+
+                    b.classList.add('btl-add-fatto');
+                    setTimeout(function() { b.classList.remove('btl-add-fatto'); }, 450);
+                });
+                destra.appendChild(b);
+            });
+        }
+
+        /* --- pulsante nella barra in fondo --------------------------- */
+        function creaPulsanteBarra() {
+            const slot = document.getElementById('btSlotLista');
+            if (!slot || slot.querySelector('.btl-btn')) return;
+
+            const b = document.createElement('button');
+            b.className = 'btl-btn';
+            b.id = 'btlPulsante';
+            b.type = 'button';
+            b.setAttribute('aria-label', 'La mia lista');
+            b.innerHTML =
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">' +
+                '<path d="M4 6h16M7 6l1.5 11h7L17 6M9.5 10.5v3M14.5 10.5v3" stroke-linecap="round"/></svg>' +
+                '<span class="btl-conta" id="btlConta">0</span>';
+            b.addEventListener('click', btlApri);
+            slot.appendChild(b);
+        }
+
+        function aggiornaPulsante() {
+            const b = document.getElementById('btlPulsante');
+            const c = document.getElementById('btlConta');
+            if (!b || !c) return;
+            const n = totaleArticoli();
+            c.textContent = n;
+            b.classList.toggle('btl-pieno', n > 0);
+        }
+
+        /* --- pulsante dentro la scheda del prodotto ------------------ */
+        let dettaglioAttuale = null;
+
+        function aggiornaPulsantePopup(dettaglio) {
+            if (dettaglio) dettaglioAttuale = dettaglio;
+            else dettaglio = dettaglioAttuale;
+            if (!dettaglio) return;
+
+            const contenuto = document.getElementById('btPopupContenuto');
+            if (!contenuto) return;
+
+            // Non tutte le schede che usano questo popup sono un vero
+            // prodotto — la card Aperitivo, per esempio, riassume una
+            // categoria intera e non ha un id proprio. Senza un id non
+            // c'e' nulla da aggiungere alla lista: il pulsante non compare.
+            if (!dettaglio.id) {
+                const esistente = document.getElementById('btlPopupAdd');
+                if (esistente) esistente.style.display = 'none';
+                return;
+            }
+
+            let b = document.getElementById('btlPopupAdd');
+            if (!b) {
+                b = document.createElement('button');
+                b.id = 'btlPopupAdd';
+                b.className = 'btl-popup-add';
+                b.type = 'button';
+                contenuto.appendChild(b);
+            }
+            b.style.display = '';
+
+            const presente = !!trova(dettaglio.id);
+            b.classList.toggle('btl-add-in-lista', presente);
+            b.disabled = presente;
+
+            b.innerHTML = presente
+                ? '<span class="lang-it">Gi&agrave; in lista</span><span class="lang-en" style="display:none;">Already in list</span>'
+                : '<span class="lang-it">+ Aggiungi alla lista</span><span class="lang-en" style="display:none;">+ Add to list</span>';
+            allineaLingua(b);
+
+            b.onclick = presente ? null : function() {
+                aggiungi(dettaglio.id, dettaglio.titolo, dettaglio.prezzo);
+                aggiornaPulsantePopup(dettaglio);
+            };
+        }
+
+        function allineaLingua(radice) {
+            const lingua = localStorage.getItem('bt_lang') || 'it';
+            radice.querySelectorAll('.lang-it').forEach(function(el) { el.style.setProperty('display', lingua === 'it' ? '' : 'none', 'important'); });
+            radice.querySelectorAll('.lang-en').forEach(function(el) { el.style.setProperty('display', lingua === 'en' ? '' : 'none', 'important'); });
+        }
+
+        /* --- la lista --------------------------------------------- */
+        function disegnaLista() {
+            const c = document.getElementById('btlContenuto');
+            if (!c) return;
+            const lingua = localStorage.getItem('bt_lang') || 'it';
+
+            // il pulsante "svuota" e' fisso nell'header, fuori da qui:
+            // si mostra solo se c'e' qualcosa da svuotare
+            const svuota = document.getElementById('btlSvuota');
+            if (svuota) svuota.style.display = lista.length ? '' : 'none';
+
+            if (!lista.length) {
+                c.innerHTML = '<div class="btl-vuota">' +
+                    (lingua === 'en'
+                        ? 'Your list is empty.<br>Tap + next to a product to add it.'
+                        : 'La lista &egrave; vuota.<br>Tocca il + accanto a un prodotto per aggiungerlo.') +
+                    '</div>';
+                return;
+            }
+
+            let html = '';
+            lista.forEach(function(v) {
+                html += '<div class="btl-riga">' +
+                    '<div class="btl-riga-testo">' +
+                        '<span class="btl-riga-nome">' + v.nome + (v.qta > 1 ? ' &times;' + v.qta : '') + '</span>' +
+                        (v.prezzo ? '<span class="btl-riga-prezzo">' + v.prezzo + '</span>' : '') +
+                    '</div>' +
+                    '<button type="button" class="btl-elimina" data-elimina="' + v.id + '" aria-label="Elimina">' +
+                        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">' +
+                            '<polyline points="3 6 5 6 21 6"></polyline>' +
+                            '<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>' +
+                        '</svg>' +
+                    '</button>' +
+                '</div>';
+            });
+
+            c.innerHTML = html;
+
+            c.querySelectorAll('[data-elimina]').forEach(function(b) {
+                b.addEventListener('click', function() { rimuoviProdotto(b.getAttribute('data-elimina')); });
+            });
+        }
+
+        // il pulsante "svuota" e' fisso nel markup, non ricreato a ogni
+        // disegno della lista: l'evento va agganciato una volta sola qui,
+        // altrimenti a ogni aggiornamento se ne accumulerebbe uno in piu'
+        (function agganciaSvuota() {
+            const svuota = document.getElementById('btlSvuota');
+            if (svuota) svuota.addEventListener('click', function() {
+                lista = []; salva(); aggiornaTutto();
+            });
+        })();
+
+        function aggiornaTutto() {
+            aggiornaPulsante();
+            sincronizzaPulsantiAggiungi();
+            aggiornaPulsantePopup();
+            if (document.getElementById('btlPopup').classList.contains('active')) disegnaLista();
+        }
+
+        window.btlApri = function() {
+            disegnaLista();
+            document.getElementById('btlPopup').classList.add('active');
+        };
+        window.btlChiudi = function() {
+            document.getElementById('btlPopup').classList.remove('active');
+        };
+
+        /* --- avvio --------------------------------------------------- */
+        function avvia() {
+            lista = carica();
+            creaPulsanteBarra();
+            marcaProdotti();
+            aggiornaPulsante();
+            sincronizzaPulsantiAggiungi();
+        }
+
+        // quando la scheda di un prodotto viene mostrata, il pulsante
+        // dentro il popup si riferisce a quel prodotto
+        document.addEventListener('bt:prodotto-mostrato', function(e) {
+            aggiornaPulsantePopup(e.detail);
+        });
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', avvia);
+        } else {
+            avvia();
+        }
+    })();
+    </script>
+
+    
+    <style>
+        .bttut-overlay {
+            position: fixed; inset: 0; z-index: 300;
+            display: none; align-items: center; justify-content: center;
+            padding: 24px;
+            background: rgba(12,9,7,0.92);
+            font-family: Georgia, 'Times New Roman', serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .bttut-overlay.attivo { display: flex; }
+        .bttut-box {
+            max-width: 360px; width: 100%; text-align: center;
+            border: 1px solid #544838; border-radius: 14px;
+            background: #241e18; color: #f6f0e3;
+            padding: 28px 24px 24px;
+        }
+        .bttut-titolo { font-size: 20px; color: #d9ab63; margin: 0 0 14px; }
+        .bttut-testo { font-size: 15px; line-height: 1.55; color: #e7ddc9; margin: 16px 0 0; }
+        .bttut-passo { display: none; }
+        .bttut-passo.attivo { display: block; }
+
+        /* --- finta schermata di esempio -------------------------------- */
+        .bttut-schermo {
+            position: relative;
+            background: #1a1510; border: 1px solid #3a3226; border-radius: 10px;
+            padding: 16px 14px; overflow: visible; text-align: left;
+        }
+        .bttut-mock-cat-riga { display: flex; gap: 8px; margin-bottom: 14px; }
+        .bttut-mock-cat {
+            flex: 1; height: 28px; border-radius: 7px;
+            background: rgba(217,171,99,0.08); border: 1px solid #453b30;
+        }
+        .bttut-mock-cat-attiva { background: rgba(217,171,99,0.22); border-color: #d9ab63; }
+
+        .bttut-mock-riga {
+            display: flex; align-items: center; justify-content: space-between; gap: 10px;
+            padding: 9px 0;
+        }
+        .bttut-mock-riga + .bttut-mock-riga { border-top: 1px solid #332b21; }
+        .bttut-mock-testo { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+        .bttut-mock-nome { font-size: 13px; color: #f6f0e3; letter-spacing: 0.02em; }
+        .bttut-mock-meta { font-size: 10px; color: #9c917d; letter-spacing: 0.03em; text-transform: uppercase; }
+        .bttut-mock-info { font-size: 9px; color: #b58c50; text-transform: uppercase; letter-spacing: 0.03em; margin-top: 1px; }
+        .bttut-mock-destra { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .bttut-mock-prezzo { font-size: 13px; color: #d9ab63; }
+        .bttut-mock-piu {
+            width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+            border: 1px solid #6b5b45; background: rgba(217,171,99,0.10); color: #d9ab63;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 14px; line-height: 1;
+        }
+
+        .bttut-mock-dito {
+            position: absolute; width: 30px; height: 30px;
+            border: 2px solid #f6f0e3; border-radius: 50%;
+            opacity: 0.75; pointer-events: none;
+        }
+        .bttut-mock-dito::after {
+            content: ''; position: absolute; inset: -7px;
+            border: 1px solid #f6f0e3; border-radius: 50%; opacity: 0.4;
+        }
+
+        .bttut-freccia-swipe { width: 100%; height: 20px; color: #d9ab63; margin-bottom: 12px; }
+
+        .bttut-mock-barra { display: flex; justify-content: flex-end; margin-top: 14px; padding-top: 12px; border-top: 1px solid #332b21; }
+        .bttut-mock-btn {
+            position: relative; height: 34px; padding: 0 12px;
+            border-radius: 17px; border: 1px solid #d9ab63;
+            background: rgba(36,30,24,0.85); color: #d9ab63;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .bttut-mock-btn svg { width: 16px; height: 16px; }
+        .bttut-mock-conta {
+            min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px;
+            background: #d9ab63; color: #241e18;
+            font-size: 10px; font-weight: 700; line-height: 17px; text-align: center;
+        }
+
+        .bttut-puntini { display: flex; justify-content: center; gap: 7px; margin: 20px 0 14px; }
+        .bttut-puntino { width: 7px; height: 7px; border-radius: 50%; background: #544838; transition: background 0.2s; }
+        .bttut-puntino.attivo { background: #d9ab63; }
+
+        .bttut-tocca {
+            font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+            color: #8a7f6c;
+        }
+    </style>
+
+    <div class="bttut-overlay" id="bttutOverlay">
+        <div class="bttut-box">
+
+            <div class="bttut-passo attivo" data-passo="1">
+                <h2 class="bttut-titolo">
+                    <span class="lang-it">Sfoglia il menu</span><span class="lang-en" style="display:none;">Browse the menu</span>
+                </h2>
+                <div class="bttut-schermo">
+                    <svg class="bttut-freccia-swipe" viewBox="0 0 200 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 10 H186 M14 10 l10 -7 M14 10 l10 7 M186 10 l-10 -7 M186 10 l-10 7"/>
+                    </svg>
+                    <div class="bttut-mock-cat-riga">
+                        <div class="bttut-mock-cat"></div>
+                        <div class="bttut-mock-cat bttut-mock-cat-attiva"></div>
+                        <div class="bttut-mock-cat"></div>
+                    </div>
+                    <div class="bttut-mock-riga">
+                        <div class="bttut-mock-testo">
+                            <div class="bttut-mock-nome">PILS</div>
+                            <div class="bttut-mock-meta">Maxlrainer &middot; Pils</div>
+                            <div class="bttut-mock-info">Maggiori info &rsaquo;</div>
+                        </div>
+                        <div class="bttut-mock-destra">
+                            <span class="bttut-mock-prezzo">6&euro;</span>
+                            <span class="bttut-mock-piu">+</span>
+                        </div>
+                    </div>
+                    <div class="bttut-mock-dito" style="left: 82px; top: 126px;"></div>
+                </div>
+                <p class="bttut-testo">
+                    <span class="lang-it">Scorri tra le categorie per vedere tutte le birre e i piatti, tocca un prodotto per vederne tutti i dettagli.</span>
+                    <span class="lang-en" style="display:none;">Swipe through the categories to see all the beers and dishes, tap a product to see all its details.</span>
+                </p>
+            </div>
+
+            <div class="bttut-passo" data-passo="2">
+                <h2 class="bttut-titolo">
+                    <span class="lang-it">La tua lista</span><span class="lang-en" style="display:none;">Your list</span>
+                </h2>
+                <div class="bttut-schermo">
+                    <div class="bttut-mock-riga">
+                        <div class="bttut-mock-testo">
+                            <div class="bttut-mock-nome">ZWICKEL</div>
+                            <div class="bttut-mock-meta">Maxlrainer &middot; Keller</div>
+                            <div class="bttut-mock-info">Maggiori info &rsaquo;</div>
+                        </div>
+                        <div class="bttut-mock-destra">
+                            <span class="bttut-mock-prezzo">6&euro;</span>
+                            <span class="bttut-mock-piu">+</span>
+                        </div>
+                    </div>
+                    <div class="bttut-mock-riga">
+                        <div class="bttut-mock-testo">
+                            <div class="bttut-mock-nome">HEFE WEIZEN</div>
+                            <div class="bttut-mock-meta">Haller L&ouml;wenbr&auml;u &middot; Weizen</div>
+                            <div class="bttut-mock-info">Maggiori info &rsaquo;</div>
+                        </div>
+                        <div class="bttut-mock-destra">
+                            <span class="bttut-mock-prezzo">6&euro;</span>
+                            <span class="bttut-mock-piu">+</span>
+                        </div>
+                    </div>
+                    <div class="bttut-mock-dito" style="right: 16px; top: 96px;"></div>
+                    <div class="bttut-mock-barra">
+                        <span class="bttut-mock-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 6h16M7 6l1.5 11h7L17 6M9.5 10.5v3M14.5 10.5v3" stroke-linecap="round"/></svg>
+                            <span class="bttut-mock-conta">2</span>
+                        </span>
+                    </div>
+                    <div class="bttut-mock-dito" style="right: 20px; top: 190px;"></div>
+                </div>
+                <p class="bttut-testo">
+                    <span class="lang-it">Trovi qualcosa che ti piace? Tocca il &ldquo;+&rdquo; per aggiungerlo alla tua lista personale. La trovi sempre nel pulsante qui sotto: mostrala al cameriere quando ordini.</span>
+                    <span class="lang-en" style="display:none;">Found something you like? Tap the &ldquo;+&rdquo; to add it to your personal list. You'll always find it in the button below &mdash; show it to the waiter when you order.</span>
+                </p>
+            </div>
+
+            <div class="bttut-puntini">
+                <span class="bttut-puntino attivo" data-puntino="1"></span>
+                <span class="bttut-puntino" data-puntino="2"></span>
+            </div>
+
+            <p class="bttut-tocca" id="bttutTocca">
+                <span class="lang-it">Tocca lo schermo per continuare</span><span class="lang-en" style="display:none;">Tap the screen to continue</span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var TOTALE_PASSI = 2;
+        var passo = 1;
+
+        function mostraPasso(n) {
+            document.querySelectorAll('.bttut-passo').forEach(function(el) {
+                el.classList.toggle('attivo', el.getAttribute('data-passo') === String(n));
+            });
+            document.querySelectorAll('.bttut-puntino').forEach(function(el) {
+                el.classList.toggle('attivo', el.getAttribute('data-puntino') === String(n));
+            });
+
+            var tocca = document.getElementById('bttutTocca');
+            if (tocca) {
+                var ultimo = (n === TOTALE_PASSI);
+                tocca.querySelector('.lang-it').textContent = ultimo ? 'Tocca lo schermo per iniziare' : 'Tocca lo schermo per continuare';
+                tocca.querySelector('.lang-en').textContent = ultimo ? 'Tap the screen to start' : 'Tap the screen to continue';
+            }
+        }
+
+        function avvia() {
+            var overlay = document.getElementById('bttutOverlay');
+            if (!overlay) return;
+            passo = 1;
+            mostraPasso(passo);
+            overlay.classList.add('attivo');
+
+            overlay.addEventListener('click', function avanzaOChiudi() {
+                if (passo < TOTALE_PASSI) {
+                    passo++;
+                    mostraPasso(passo);
+                    return;
+                }
+                overlay.classList.remove('attivo');
+                overlay.removeEventListener('click', avanzaOChiudi);
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', avvia);
+        } else {
+            avvia();
+        }
+    })();
+    </script>
+
+        <script>
+    (function() {
+        var URL_AJAX = "https:\/\/www.birrifugiotrastevere.com\/wp-admin\/admin-ajax.php";
+        var NONCE    = "9c230306a4";
+
+        function manda(tipo, id) {
+            if (!id) return; // niente id valido (es. la card Aperitivo), niente da contare
+            var dati = new FormData();
+            dati.append('action', 'btan_conta');
+            dati.append('nonce', NONCE);
+            dati.append('tipo', tipo);
+            dati.append('id', id);
+            // keepalive: la richiesta parte comunque anche se la persona
+            // cambia schermata un istante dopo aver toccato qualcosa
+            fetch(URL_AJAX, { method: 'POST', body: dati, keepalive: true }).catch(function() {});
+        }
+
+        document.addEventListener('bt:prodotto-mostrato', function(e) {
+            manda('prodotto', e.detail && e.detail.id);
+        });
+        document.addEventListener('bt:categoria-mostrata', function(e) {
+            manda('categoria', e.detail && e.detail.id);
         });
     })();
     </script>
